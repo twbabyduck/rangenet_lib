@@ -505,7 +505,7 @@ void NetTensorRT::generateEngine(const std::string& onnx_path) {
   std::cout << "Platform ";
   if (builder->platformHasFastFp16()) {
     std::cout << "HAS ";
-    builder->setFp16Mode(true);
+    builder->setFp16Mode(false);
   } else {
     std::cout << "DOESN'T HAVE ";
     builder->setFp16Mode(false);
